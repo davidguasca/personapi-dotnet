@@ -1,0 +1,31 @@
+-- Creación de tablas
+CREATE TABLE persona (
+    cc INT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    genero VARCHAR(50),
+    edad INT
+);
+
+CREATE TABLE telefono (
+    num INT PRIMARY KEY,
+    oper VARCHAR(255),
+    duenio INT,
+    FOREIGN KEY (duenio) REFERENCES persona(cc)
+);
+
+CREATE TABLE profesion (
+    id INT PRIMARY KEY,
+    nom VARCHAR(255),
+    des VARCHAR(255)
+);
+
+CREATE TABLE estudios (
+    id_prof INT,
+    cc_per INT,
+    fecha DATE,
+    univer VARCHAR(255),
+    PRIMARY KEY (id_prof, cc_per),
+    FOREIGN KEY (id_prof) REFERENCES profesion(id),
+    FOREIGN KEY (cc_per) REFERENCES persona(cc)
+);
