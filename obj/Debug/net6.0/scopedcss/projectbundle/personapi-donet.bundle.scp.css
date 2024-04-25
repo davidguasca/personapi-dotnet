@@ -1,0 +1,48 @@
+/* _content/personapi-donet/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+/* Sobrescribiendo los estilos de Bootstrap */
+.navbar[b-yhvcc0rhkr] {
+    background-color: #333; /* Establece un color de fondo oscuro */
+    border-color: #444; /* Borde ligeramente más claro que el fondo */
+}
+
+.navbar-brand[b-yhvcc0rhkr] {
+    color: #eee; /* Color claro para el texto del título */
+}
+
+.navbar-light .navbar-nav .nav-link[b-yhvcc0rhkr] {
+    color: #ddd; /* Color claro para los enlaces */
+}
+
+    .navbar-light .navbar-nav .nav-link:hover[b-yhvcc0rhkr] {
+        color: #fff; /* Color blanco para los enlaces al pasar el mouse */
+    }
+
+/* Estilos para el contenedor principal */
+.container[b-yhvcc0rhkr] {
+    background-color: #f8f8f8; /* Fondo claro para el contenido principal */
+    color: #333; /* Color oscuro para el texto */
+}
+
+/* Estilo para mejorar la legibilidad del contenido */
+.main[b-yhvcc0rhkr] {
+    padding: 20px; /* Añade padding para espacio interno */
+    border: 1px solid #ddd; /* Borde sutil */
+}
+
+/* Estilos para el pie de página */
+.footer[b-yhvcc0rhkr] {
+    background-color: #333; /* Fondo oscuro para el footer */
+    color: #ccc; /* Texto en color claro */
+    padding: 10px 0; /* Padding vertical para el footer */
+}
+
+    .footer a[b-yhvcc0rhkr] {
+        color: #fff; /* Enlaces en blanco para contrastar con el fondo oscuro */
+    }
+
+        .footer a:hover[b-yhvcc0rhkr] {
+            color: #ffd700; /* Cambio a color dorado al pasar el mouse */
+        }

@@ -1,0 +1,77 @@
+﻿/* Colores adicionales y estilos mejorados */
+:root {
+    --color-primary: #4a76d1; /* Un azul más vibrante */
+    --color-secondary: #ff6347; /* Un tono coral para detalles */
+    --color-accent: #4cd137; /* Verde para acciones o énfasis */
+    --color-light: #ffffff; /* Blanco puro para fondos y áreas de contenido */
+    --color-dark: #273c75; /* Azul oscuro para textos con contraste */
+    --color-text: #353b48; /* Gris oscuro para texto general */
+    --color-footer: #f1f2f6; /* Gris muy claro para el fondo del footer */
+    --color-link: #487eb0; /* Azul para enlaces */
+}
+
+/* Aplicación de estilos de barra de navegación */
+.navbar {
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary)); /* Gradiente de dos colores */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.navbar-brand {
+    color: var(--color-light);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link:focus {
+        color: var(--color-light);
+        background-color: rgba(255, 255, 255, 0.1); /* Suave resaltado al pasar por encima */
+    }
+
+/* Estilos mejorados del contenedor */
+.container {
+    background-color: var(--color-light);
+    color: var(--color-text);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Bordes redondeados para suavidad */
+    overflow: hidden; /* Oculta cualquier desbordamiento para mantener los bordes redondeados */
+}
+
+.main {
+    padding: 20px;
+    border-top: 5px solid var(--color-secondary); /* Barra de acento en la parte superior */
+}
+
+/* Footer con fondo claro y estilos actualizados */
+.footer {
+    background-color: var(--color-footer);
+    color: var(--color-text);
+    padding: 20px 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra hacia arriba para efecto elevado */
+    border-top: 5px solid var(--color-primary); /* Borde superior para continuidad de color */
+}
+
+    .footer a {
+        color: var(--color-link);
+        text-decoration: none; /* Elimina el subrayado de los enlaces */
+        transition: color 0.3s;
+    }
+
+        .footer a:hover {
+            color: var(--color-secondary);
+        }
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px; /* Ajustar el relleno para dispositivos más pequeños */
+    }
+
+    .main, .footer {
+        padding: 15px; /* Menos relleno para mantener más espacio */
+    }
+}

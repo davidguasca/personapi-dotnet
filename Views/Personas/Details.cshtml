@@ -1,0 +1,98 @@
+﻿@model personapi_donet.Models.Persona
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles de la Persona</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Genero)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Genero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Edad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Edad)
+        </dd>
+    </dl>
+
+    <h3>Teléfonos</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Número</th>
+                <th>Operador</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var telefono in Model.Telefonos)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => telefono.Num)</td>
+                    <td>@Html.DisplayFor(modelItem => telefono.Oper)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h3>Profesion</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var estudio in Model.Estudios)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => estudio.IdProfNavigation.Nom)</td>
+                    <td>@Html.DisplayFor(modelItem => estudio.IdProfNavigation.Des)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h3>Estudios</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Universidad</th>
+                <th>Fecha</th>               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var estudio in Model.Estudios)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => estudio.Univer)</td>
+                    <td>@Html.DisplayFor(modelItem => estudio.Fecha)</td>          
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Cc">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
