@@ -1,0 +1,5 @@
+-- Inserción de datos
+INSERT INTO persona (cc, nombre, apellido, genero, edad) VALUES (12345, 'Juan', 'Perez', 'Masculino', 30);
+INSERT INTO telefono (num, oper, duenio) VALUES (987654321, 'OperadorA', 12345);
+INSERT INTO profesion (id, nom, des) VALUES (1, 'Ingeniería', 'Ingeniero de Sistemas');
+INSERT INTO estudios (id_prof, cc_per, fecha, univer) VALUES (1, 12345, '2024-01-01', 'UniversidadA');
